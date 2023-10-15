@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Poppins:ital,wght@0,400;0,500;0,700;1,200&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+
+        .main {
+            position: relative;
+            display: inline-block;
+        }
+
+        .progress {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+
+
+        .timer {
+            width: 100px;
+            height: 50px;
+            background-color: #181a31;
+            flex-shrink: 0;
+            color: white;
+            border: 4px solid white;
+        }
+
+        .enemyWrapper {
+            width: 100%;
+            position: relative;
+            border-bottom: 4px solid white;
+            border-top: 4px solid white;
+            border-right: 4px solid white;
+
+        }
+
+        .enemy {
+            height: 30px;
+            background-color: red;
+
+        }
+
+        #enemyHP {
+            background-color: #818cf8;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .playerWrapper {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 4px solid white;
+            border-top: 4px solid white;
+            border-left: 4px solid white;
+
+
+
+        }
+
+        .player {
+            height: 30px;
+            background-color: red;
+            width: 100%;
+
+        }
+
+        #playerHP {
+            background-color: #818cf8;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .displayText {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            background-color: rgba(17, 17, 17, 0.5);
+        }
+    </style>
+    <title>Fighter Game</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="progress">
+            <div class="playerWrapper">
+                <div class="player"></div>
+
+                <div id="playerHP"></div>
+
+            </div>
+            <div class="timer">10</div>
+            <div class="enemyWrapper">
+                <div class="enemy"></div>
+
+                <div id="enemyHP"></div>
+
+            </div>
+        </div>
+        <div class="displayText">
+            Tie
+        </div>
+        <canvas></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
